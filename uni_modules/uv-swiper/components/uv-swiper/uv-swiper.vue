@@ -60,6 +60,7 @@
 						v-if="getItemType(item) === 'video'"
 						:id="`video-${index}`"
 						:enable-progress-gesture="false"
+						:autoplay="videoAutoplay"
 						:src="getSource(item)"
 						:poster="getPoster(item)"
 						:title="showTitle && $uv.test.object(item) && item.title ? item.title : ''"
@@ -107,6 +108,7 @@
 	 * @property {String | Object}	indicatorStyle			指示器样式，可通过bottom，left，right进行定位
 	 * @property {String}			indicatorMode			指示器模式（默认 'line' ）
 	 * @property {Boolean}			autoplay				是否自动切换（默认 true ）
+	 * @property {Boolean}			videoAutoplay				视频是否自动切换（默认 false ）
 	 * @property {String | Number}	current					当前所在滑块的 index（默认 0 ）
 	 * @property {String}			currentItemId			当前所在滑块的 item-id ，不能与 current 被同时指定
 	 * @property {String | Number}	interval				滑块自动切换时间间隔（ms）（默认 3000 ）

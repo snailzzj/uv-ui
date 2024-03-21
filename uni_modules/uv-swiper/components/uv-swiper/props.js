@@ -35,6 +35,11 @@ export default {
 			type: Boolean,
 			default: true
 		},
+		// video是否自动播放
+    videoAutoplay: {
+      type: Boolean,
+      default: false,
+    },
 		// 当前所在滑块的 index
 		current: {
 			type: [String, Number],
